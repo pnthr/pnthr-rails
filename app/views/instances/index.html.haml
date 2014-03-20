@@ -1,0 +1,11 @@
+.ui.grid.two.column.page
+  .column
+    %h1
+      = t('applications.list')
+
+    = render @applications
+
+
+  .column
+    %h2 Quick Links
+    %a.ui.button{ href: new_application_path } Create a New Application

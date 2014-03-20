@@ -3,6 +3,7 @@ SemanticRails::Application.routes.draw do
 
   authenticated :user do
     root to: 'home#index', as: :authenticated_root
+    resources :instances
   end
 
   unauthenticated do

@@ -1,0 +1,14 @@
+%table.ui.table.segment
+  %tbody
+    %tr
+      %th Identifier
+      %td= application.identifier
+    %tr
+      %th Secret
+      %td= application.secret
+    %tr
+      %th Password
+      %td= application.password
+    %tr
+      %td= link_to 'Edit', edit_application_path(application)
+      %td= link_to 'Destroy', application, :method => :delete, :data => { :confirm => 'Are you sure?' }

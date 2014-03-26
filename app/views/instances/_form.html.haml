@@ -1,14 +1,16 @@
-= simple_form_for @application do |f|
-  - if @application.errors.any?
+= simple_form_for @instance do |f|
+  - if @instance.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@application.errors.count, "error")} prohibited this application from being saved:"
+      %h2= "#{pluralize(@instance.errors.count, "error")} prohibited this application from being saved:"
       %ul
-        - @application.errors.full_messages.each do |msg|
+        - @instance.errors.full_messages.each do |msg|
           %li= msg
 
   = f.input :name
   = f.input :description, as: :text
-  = f.input :password
+
+  - unless params[:action] == 'edit'
+    = f.input :password
 
   .actions
     = f.button :submit, 'Save Application'

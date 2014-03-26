@@ -1,12 +1,19 @@
 .ui.inverted.secondary.pointing.menu
   = nav_link t('navigation.home'), root_path, icon: 'home'
 
+  - if user_signed_in?
+    = nav_link t('navigation.instances'), instances_path, icon: 'browser'
+
   .right.menu
     - if user_signed_in?
       = nav_link t('account.edit'), edit_user_registration_path, icon: 'user'
 
       - if current_user.has_role? :admin
-        = nav_link t('admin.users'), users_path, icon: 'users'
+        .ui.dropdown.item
+          %i.arrow.down.icon
+          Manage
+          .menu
+            = nav_link t('admin.users'), users_path, icon: 'users'
 
       = nav_link t('navigation.logout'), destroy_user_session_path, method: 'delete', icon: 'sign out'
     - else

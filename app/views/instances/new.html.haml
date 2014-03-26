@@ -1,8 +1,9 @@
 .ui.grid.two.column.page
   .column
-    %h1 New application
+    %h1
+      = t('instance.new')
 
     = render 'form'
 
   .column
-    = link_to 'Back', applications_path
+    = link_to 'Back', instances_path

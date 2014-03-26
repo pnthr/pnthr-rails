@@ -1,0 +1,19 @@
+%table.ui.table.segment
+  %tbody
+    %tr
+      %th Name
+      %td= instance.name
+    %tr
+      %th Description
+      %td= instance.description
+    %tr
+      %th Identifier
+      %td= instance.identifier
+    %tr
+      %th Secret
+      %td= instance.secret
+    %tr
+      %td
+      %td
+        = link_to 'Edit', edit_instance_path(instance), class: 'ui mini black button'
+        = link_to 'Destroy', instance, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'ui mini red button'

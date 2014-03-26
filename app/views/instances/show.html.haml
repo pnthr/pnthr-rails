@@ -1,9 +1,7 @@
-.flash
-  = notice
-
 .ui.grid.two.column.page
   .column
-    = render @application
+    %h1= @instance.name
+    = render @instance
 
   .column
-    = link_to 'Back', applications_path
+    = link_to 'Back', instances_path

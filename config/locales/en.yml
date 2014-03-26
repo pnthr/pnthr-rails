@@ -3,6 +3,7 @@ en:
     home: Home
     logout: Logout
     login: Login
+    instances: Manage Applications
 
   account:
     create: Sign Up
@@ -16,3 +17,13 @@ en:
     register_with_email: Register with Email
     with_facebook: Login with Facebook
     with_twitter: Login with Twitter
+
+  instance:
+    list: Applications
+    new: New Application
+    edit: Edit Application
+    field:
+      name: Name
+      description: Description
+      identifier: App ID
+      secret: App Secret

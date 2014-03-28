@@ -57,6 +57,6 @@ class InstancesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def instance_params
-      params.require(:instance).permit(:name, :description, :identifier, :secret, :password)
+      params.require(:instance).permit(:name, :description, :secret, :password)
     end
 end

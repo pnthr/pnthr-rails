@@ -31,3 +31,6 @@ gem 'simple_form', github: 'plataformatec/simple_form'
 
 # Heroku
 gem 'rails_12factor', group: :production
+
+# Security
+gem 'pnthr', path: '../Gems/pnthr'

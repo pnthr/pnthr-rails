@@ -19,6 +19,7 @@ type Instance struct {
 }
 
 func main() {
+
   m := martini.Classic()
 
   /**

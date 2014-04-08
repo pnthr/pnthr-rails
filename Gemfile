@@ -33,4 +33,4 @@ gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'rails_12factor', group: :production
 
 # Security
-gem 'pnthr', path: '../Gems/pnthr'
+# gem 'pnthr', path: '../Gems/pnthr'

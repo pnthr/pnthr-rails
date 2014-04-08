@@ -12,8 +12,8 @@ class User
   field :first_name, type: String
   field :last_name, type: String
   field :roles_mask, type: Integer
-  
-  validates_presence_of :email, :first_name, :last_name
+
+  validates_presence_of :email
 
   def full_name
     "#{first_name} #{last_name}"

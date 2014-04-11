@@ -1,58 +1,70 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-  }
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 
-  div.dialog {
-    width: 25em;
-    margin: 4em auto 0 auto;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 4em 0 4em;
-  }
-
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  body > p {
-    width: 33em;
-    margin: 0 auto 1em;
-    padding: 1em 0;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow:0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
+    <title>Pnthr - Error</title>
+    <meta content='App' name='description'>
+    <link data-turbolinks-track="true" href=
+    "/assets/application-c72fd4be8c001c8a94f86f0df6a0c13c.css" media="all" rel=
+    "stylesheet">
+    <script data-turbolinks-track="true" src=
+    "/assets/application-4f65a78eee2dd322bd5e8078e3af8ddb.js"></script>
+    <meta content="authenticity_token" name="csrf-param">
+    <meta content="CNXqloT/MH4jkAyRh/jMWjhutzD7Q4qudhYGXG/N9Uw=" name=
+    "csrf-token">
 </head>
 
-<body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
-  </div>
-  <p>If you are the application owner check the logs for more information.</p>
+<body class='registrations new'>
+    <header>
+        <div class='ui inverted secondary pointing menu'>
+            <a class="item" href="/">Home</a>
+
+            <div class='right menu'>
+                <div class='ui dropdown item'>
+                    Login or Register
+
+                    <div class='menu'>
+                        <a class="item" href="/users/sign_in">Login with
+                        Email</a> <a class=" active item" href=
+                        "/users/sign_up">Register with Email</a> <a class=
+                        "item" href="/users/auth/facebook">Login with
+                        Facebook</a> <a class="item" href=
+                        "/users/auth/twitter">Login with Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class='' id='main'>
+        <div class='ui grid two column page'>
+            <div class='column'>
+                <h1>Honeypots are for suckers</h1>
+                <p>
+                  We hope you're not prodding for vulnerabilities, because we're watching what you do.
+                </p>
+                <p>
+                  If you encountered this page on accident, it's okay, we're already aware that you stumbled across a bug and we
+                  will fix asap. Move along now, there's nothing else for you here.
+                </p>
+            </div>
+
+            <div class='column'>
+                <h2>Quick Links</h2>
+
+                <div class='ui bulleted list'>
+                    <a class="item" href="/users/sign_in">Sign in</a> <a class=
+                    "item" href="/users/password/new">Forgot your password?</a>
+                    <a class="item" href="/users/confirmation/new">Didn't
+                    receive confirmation instructions?</a> <a class="item"
+                    href="/users/auth/facebook">Sign in with Facebook</a>
+                    <a class="item" href="/users/auth/twitter">Sign in with
+                    Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -21,10 +21,12 @@ class InstancesController < ApplicationController
 
   # POST /instances
   def create
+    require 'securerandom'
+
     @instance = Instance.new(instance_params)
 
-    @instance.identifier = Digest::MD5.hexdigest(nil, false)
-    @instance.secret = Digest::MD5.hexdigest(nil, false)
+    @instance.identifier = Digest::MD5.hexdigest(SecureRandom.hex)
+    @instance.secret = Digest::MD5.hexdigest(SecureRandom.hex)
     @instance.password = Digest::MD5.hexdigest(instance_params[:password])
 
     if @instance.save

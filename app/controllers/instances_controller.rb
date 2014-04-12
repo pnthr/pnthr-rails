@@ -25,7 +25,6 @@ class InstancesController < ApplicationController
 
     @instance = Instance.new(instance_params)
 
-    @instance.identifier = Digest::MD5.hexdigest(SecureRandom.hex)
     @instance.secret = Digest::MD5.hexdigest(SecureRandom.hex)
     @instance.password = Digest::MD5.hexdigest(instance_params[:password])
 

@@ -27,6 +27,7 @@ class InstancesController < ApplicationController
 
     @instance.secret = Digest::MD5.hexdigest(SecureRandom.hex)
     @instance.password = Digest::MD5.hexdigest(instance_params[:password])
+    @instance.user = current_user
 
     if @instance.save
       redirect_to @instance, notice: 'Instance was successfully created.'

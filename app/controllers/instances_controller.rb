@@ -3,7 +3,7 @@ class InstancesController < ApplicationController
 
   # GET /applications
   def index
-    @instances = Instance.all
+    @instances = Instance.where(user: current_user)
   end
 
   # GET /instances/1

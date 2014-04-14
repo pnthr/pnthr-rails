@@ -5,7 +5,7 @@ class User
   include User::Roles
 
   has_many :identities
-
+  has_many :instances
 
   field :email, type: String
   field :image, type: String

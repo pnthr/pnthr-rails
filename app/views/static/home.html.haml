@@ -1,52 +1,51 @@
-%section#intro
-  .ui.grid.two.column.page
-    .column.ten.wide
-      %a{ href: root_path }
-        %img{ src: image_path('logo.svg'), alt: 'pnthr', width: '100%' }
+%a.logo{ href: root_path }
+  %img{ src: image_path('logo.svg'), alt: 'pnthr', width: '100%' }
 
-      %h1 Enterprise Level Security; Simplified
-      %p
-        Pnthr (pronounced "panther") is a simple security service that takes your data, encrypts it and sends it back to you.
-        It sounds simple, but it's impenetrable if implemented properly, and the process goes like this:
+.ui.grid.two.column.page
+  .column.ten.wide
+    %h1 Enterprise Level Security; Simplified
+    %p
+      Pnthr (pronounced "panther") is a simple security service that takes your data, encrypts it and sends it back to you.
+      It sounds simple, but it's impenetrable if implemented properly, and the process goes like this:
 
-      %ol
-        %li
-          %a{ href: 'https://pnthr.net', title: 'Panther Net' } Create an application
-          which will create three "keys" used to encrypt your data:
-          %ul
-            %li
-              %strong Application Id
-              %em
-                used to look up your application secret and password.
-                This application ID gets passed publicly with every request using a
-                custom header called "pnthr"
-            %li
-              %strong Application Secret
-              %em
-                will be used to encrypt the data using AES 192.
-                All data sent to and from pnthr is encrypted this way for transport
-                with only your server and ours knowing the decryption key
-            %li
-              %strong Application Password
-              %em
-                once created, can never be retrieved. This password is the final encryption piece
-                that is used to protect the data so that your server can never decrypt the data without it.
-                We give you the tools to generate the key, but so long as you never store it,
-                your data will always be safe
-        %li
-          %a{ href: '#docs-transport' } Encrypt your raw data for transport
-          using your AES 192 with your App Secret as a key. Since man in the middle attacks can still happen with SSL,
-          encrypting your data further will prevent these attacks. Then just base64 encode and post to pnthr.
-        %li
-          %a{ href: '#docs-pnthr' } Pnthr will encrypt and return
-          the data you sent by first decoding and decrypting the packet with the app secret.
-          Then encrypting with the password and secondly with the transport encryption (AES 192 with Secret Key)
-          and responding with the encrypted data.
+    %ol
+      %li
+        %a{ href: 'https://pnthr.net', title: 'Panther Net' } Create an application
+        which will create three "keys" used to encrypt your data:
+        %ul
+          %li
+            %strong Application Id
+            %em
+              used to look up your application secret and password.
+              This application ID gets passed publicly with every request using a
+              custom header called "pnthr"
+          %li
+            %strong Application Secret
+            %em
+              will be used to encrypt the data using AES 192.
+              All data sent to and from pnthr is encrypted this way for transport
+              with only your server and ours knowing the decryption key
+          %li
+            %strong Application Password
+            %em
+              once created, can never be retrieved. This password is the final encryption piece
+              that is used to protect the data so that your server can never decrypt the data without it.
+              We give you the tools to generate the key, but so long as you never store it,
+              your data will always be safe
+      %li
+        %a{ href: '#docs-transport' } Encrypt your raw data for transport
+        using your AES 192 with your App Secret as a key. Since man in the middle attacks can still happen with SSL,
+        encrypting your data further will prevent these attacks. Then just base64 encode and post to pnthr.
+      %li
+        %a{ href: '#docs-pnthr' } Pnthr will encrypt and return
+        the data you sent by first decoding and decrypting the packet with the app secret.
+        Then encrypting with the password and secondly with the transport encryption (AES 192 with Secret Key)
+        and responding with the encrypted data.
 
-    .column.one.wide
+  .column.one.wide
 
-    .column.five.wide
-      %h2 How Pnthr Works
+  .column.five.wide
+    %h2 How Pnthr Works
 
-      %img{ src: image_url('process.png') }
+    %img{ src: image_url('process.png') }
 

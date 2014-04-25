@@ -11,12 +11,14 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-twitter"
 
+
 # Data stores
 gem "mongoid", github: "mongoid/mongoid"
+gem "annex-cms"
 
 # Assets
 gem "sass-rails", "~> 4.0.0"
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem "semantic-ui-sass", github: "doabit/semantic-ui-sass"
 gem "font-awesome-sass-rails"
 gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.0.0"
@@ -24,13 +26,13 @@ gem "jquery-rails"
 gem "turbolinks"
 
 # Views
-gem 'active_model_serializers'
-gem 'haml'
-gem 'haml-rails', group: :development
-gem 'simple_form', github: 'plataformatec/simple_form'
+gem "active_model_serializers"
+gem "haml"
+gem "haml-rails", group: :development
+gem "simple_form", github: "plataformatec/simple_form"
 
 # Heroku
-gem 'rails_12factor', group: :production
+gem "rails_12factor", group: :production
 
 # Security
-# gem 'pnthr', path: '../Gems/pnthr'
+gem "pnthr"

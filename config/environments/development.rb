@@ -1,5 +1,4 @@
 SemanticRails::Application.configure do
-  config.action_mailer.default_url_options = {host: "localhost:3000"}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -27,4 +26,9 @@ SemanticRails::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Use mailcatcher (mailcatcher.me) locally
+  config.action_mailer.default_url_options = { host: "localhost:8080" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 end

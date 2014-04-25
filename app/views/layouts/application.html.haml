@@ -11,6 +11,10 @@
 
     = csrf_meta_tags
 
+    - if current_user and current_user.has_role? :admin
+      = stylesheet_link_tag "annex", media: "all", "data-turbolinks-track" => true
+      = javascript_include_tag "annex", "data-turbolinks-track" => true
+
     = yield(:head)
 
   %body{:class => "#{controller_name} #{action_name}"}

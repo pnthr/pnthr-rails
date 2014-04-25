@@ -1,5 +1,6 @@
 .ui.inverted.secondary.pointing.menu
   = nav_link t('navigation.home'), root_path, icon: 'home'
+  = nav_link t('navigation.about'), about_path, icon: 'info'
 
   - if user_signed_in?
     = nav_link t('navigation.instances'), instances_path, icon: 'browser'

@@ -44,7 +44,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   @extend %font_body;
 
-  background: #222;
+  background: #080820 image-url('background.png');
   color: #aaa;
   font-size: 10px;
   font-weight: 100;
@@ -98,7 +98,7 @@ q:before, q:after
 }
 
 p {
-  font-size: .875em;
+  font-size: 1em;
   line-height: 1.75em;
   padding: .25em 0 .5em;
 
@@ -144,8 +144,11 @@ label {
  * We all have to start somewhere, it might as well be here
  */
 #main {
+  background: rgba(4, 4, 20, 0.4);
+  padding: 4% 0;
+
   ul {
-    font-size: .875em;
+    font-size: 1em;
     line-height: 1.75em;
     margin: 0 0 1.5em 18px;
 
@@ -155,7 +158,7 @@ label {
 
     li {
       list-style: circle;
-      margin: 5px 0;
+      margin: .75em 0;
 
       ul li {
         list-style: disc;
@@ -168,7 +171,7 @@ label {
   }
 
   ol {
-    font-size: .875em;
+    font-size: 1em;
     line-height: 1.75em;
     margin: 0 0 1em 18px;
 
@@ -178,7 +181,7 @@ label {
 
     li {
       list-style: decimal;
-      margin: 5px 0;
+      margin: .75em 0;
 
       ul li {
         list-style: square;
@@ -197,6 +200,6 @@ label {
 
 .logo {
   display: block;
-  margin: 3% 0 1% 10%;
-  width: 40%;
+  margin: 3% 0 3% 6%;
+  width: 50%;
 }

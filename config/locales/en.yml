@@ -1,6 +1,7 @@
 en:
   navigation:
     home: Home
+    about: About
     logout: Logout
     login: Login
     instances: Manage Applications

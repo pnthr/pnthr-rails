@@ -1,8 +1,9 @@
 SemanticRails::Application.routes.draw do
 
+  mount Annex::Engine => '/annex', :as => 'annex'
 
   authenticated :user do
-    root to: 'static#home', as: :authenticated_root
+    root to: "static#home", as: :authenticated_root
     resources :instances
   end
 
@@ -18,6 +19,7 @@ SemanticRails::Application.routes.draw do
 
   resources :users
 
+  get "about", to: "static#about"
   get "static/home"
 
   # The priority is based upon order of creation: first created -> highest priority.

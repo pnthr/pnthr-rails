@@ -7,7 +7,7 @@
 
   .right.menu
     - if user_signed_in?
-      = nav_link t('account.edit'), edit_user_registration_path, icon: 'user'
+      = nav_link t('account.edit'), edit_user_path(current_user), icon: 'user'
 
       - if current_user.has_role? :admin
         .ui.dropdown.item

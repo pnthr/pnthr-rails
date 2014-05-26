@@ -5,6 +5,8 @@ SemanticRails::Application.routes.draw do
   authenticated :user do
     root to: "static#home", as: :authenticated_root
     resources :instances
+
+    get 'users/edit', to: redirect('users')
   end
 
   unauthenticated do

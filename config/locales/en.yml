@@ -19,6 +19,10 @@ en:
     with_facebook: Login with Facebook
     with_twitter: Login with Twitter
 
+  user:
+    edit:
+      header: Edit your Info
+
   instance:
     list: Applications
     new: New Application
